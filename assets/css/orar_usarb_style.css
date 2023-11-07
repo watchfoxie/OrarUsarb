@@ -15,35 +15,40 @@ body{
 }
 
 main{
+	display: grid;
+    grid-template-columns: 37% 63%;
     height: 100%;
-    padding-left: 40px;
-    padding-right: 40px;
-    display: grid;
-    grid-template-columns: 40% 60%;
+    padding: 0px 40px;
+	margin: 0px 120px;
+
 }
 
 #main_section{
     height: 100%;
 }
-.header_name{
+#header_name{
+	margin: 0px;
+	position: relative;
+	top: 3%;
     height: 50px;
     width: 100%;
-    margin: 0px;
+	padding: 10px 0px 10px 0px;
     background-color: white;
-    padding: 15px 15px 15px 15px;
 
 }
-.header_name h1{
+#header_name h1{
     margin: 0;
-    display: block;
-    height: 100%;
-    width: 100%;
+	position: relative;
+	top: 15%;
+	width: 100%;
     text-align:center;
     color: #666666;
-    font-weight: bolder;
+    font-weight:bolder;
+	font-size: 1.7em;
 
 }
 
 #secondary_section{
     height: 100%;
 }
+
