@@ -34,7 +34,7 @@ main{
     height: 50px;
     width: 100%;
 	padding: 10px 0px 10px 0px;
-    background-color: white;
+    background-color: #FFFFFF;
 
 }
 #header_name h1{
@@ -55,6 +55,7 @@ main{
 	height: 50px;
 	width: 100%;
 	justify-content: space-between;
+	margin-bottom: 10px;
 }
 button{
 	margin: 0;
@@ -72,5 +73,27 @@ button:hover{
 	background-color:#FFFFFF;
 	color: black;
 	transition: background-color 500ms ease-in-out, color 500ms ease-in-out;
+}
+#input_area{
+	display:grid;
+	grid-template-columns: 9% 92%;
+	height: 25px;
+	width: 100%;
+	background-color: #FFFFFF;
+}
+
+#input_area img{
+	display:block;
+	height: 25px;
+	width: 25px;
+}
+
+#input_area input{
+	display:block;
+	border:none;
+	outline:none;
+	font-size: 11pt;
+	font-weight:600;
+	color:#808080;
 }
 
