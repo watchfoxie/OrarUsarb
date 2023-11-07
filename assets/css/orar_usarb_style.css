@@ -140,30 +140,52 @@ button:hover{
 
 #timetable_lessons{
 	display:flex;
-	height: 200px;
 	width: 100%;
 	background-color:#FFFFFF;
 	flex-direction: column;
 	flex-wrap: wrap;	
 }
+#timetable_lessons:hover{
+	cursor: pointer;
+}
 
-#calendar_day_number{
+.calendar_rows{
 	display:flex;
 	flex-direction: row;
+	justify-content: space-between;
+	align-content: center;
 
 }
-#calendar_day_number div{
+
+.calendar_rows div{
 	text-align: center;
-	width: 100%;
-	border: 1px solid red;
+	font-size: 12pt;
+	font-weight: 500;
+	width: calc(100%/8);
+	
 }
 
-#calendar_day_abbreviation{
-	/*Time to do push*/
+.green_cell_style{
+	background-color: rgba(45,153,96,0.85);
+	color: #FFFFFF;
+	border: 1px solid #FFFFFF;
 }
 
-#calendar_day_abbreviation div{
-	/*In work*/
+.green_cell_style:hover{
+	background-color:#F5F5C5;
+	color: #000000;
+	cursor:pointer;
+	transition: background-color 80ms ease-in-out, color 80ms ease-in-out;
 }
+
+.white_cell_style{
+	background-color: rgba(255,255,255,0.85);
+	color: #000000;
+	border-right: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+}
+
+
+
 
 
