@@ -124,7 +124,7 @@ button:hover{
 	transition: background-color 80ms ease-in-out, color 80ms ease-in-out;
 }
 
-#days_option{
+#days_option, #weeks_option{
 	display: block;
 	height: 40px;
 	width: 100%;
@@ -136,5 +136,34 @@ button:hover{
 	font-weight: 600;
 }
 
-#days_option option{ font-size: 11pt; }
+#days_option option, #weeks_option option{ font-size: 11pt; }
+
+#timetable_lessons{
+	display:flex;
+	height: 200px;
+	width: 100%;
+	background-color:#FFFFFF;
+	flex-direction: column;
+	flex-wrap: wrap;	
+}
+
+#calendar_day_number{
+	display:flex;
+	flex-direction: row;
+
+}
+#calendar_day_number div{
+	text-align: center;
+	width: 100%;
+	border: 1px solid red;
+}
+
+#calendar_day_abbreviation{
+	/*Time to do push*/
+}
+
+#calendar_day_abbreviation div{
+	/*In work*/
+}
+
 
