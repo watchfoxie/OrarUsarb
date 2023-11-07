@@ -1,0 +1,31 @@
+@charset "utf-8";
+html {
+    height: 120vh;
+}
+
+body{
+    margin: 0;
+    height: 100%;
+    background-image: url("../images/blured_usarb_upscale.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	font-family: 'Roboto', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+}
+
+main{
+    height: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+#main_section{
+    height: 100%;
+}
+
+#secondary_section{
+    height: 100%;
+}
