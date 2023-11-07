@@ -185,6 +185,21 @@ button:hover{
 	border-bottom: 1px solid #000000;
 }
 
+#timetable_legend{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 100%;
+}
+
+#timetable_legend p{
+	display:block;
+	color: white;
+	margin: 10px;
+	font-size: 9pt;
+	font-weight: 600;
+}
+
 
 
 
