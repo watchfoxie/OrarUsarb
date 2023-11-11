@@ -11,6 +11,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/orar_usarb_style.css">
     <link rel="icon" type="image/png" href="assets/images/icons/jingle_bell.png">
+	<base target="_blank">
     <title>Orar USARB</title>
 </head>
 <body>
@@ -25,16 +26,18 @@
 				<button>Aule</button>
 			</div>
 			<div id="input_area">
-				<img src="assets/images/icons/magnifier.png" alt="lupa de cautare"/>
 				<input type="search" autocomplete="off">
 			</div>
 			<div id="search_results">
 				<ul>
-					<li>IS11Z</li>
-					<li>IS21Z</li>
-					<li>IS31Z</li>
-					<li>IS11R</li>
-					<li>IS21R</li>
+					<li tabindex="1">IS11Z</li>
+					<li tabindex="2">IS21Z</li>
+					<li tabindex="3">IS31Z</li>
+                    <li tabindex="4">IS41Z</li>
+					<li tabindex="5">IS11R</li>
+					<li tabindex="6">IS21R</li>
+                    <li tabindex="7">IS31R</li>
+                    <li tabindex="8">IS41R</li>
 				</ul>
 			</div>
 			<select name="days" id="days_option">
@@ -85,50 +88,50 @@
 				</div>
 				<div class="calendar_rows">
 					<div class="green_cell_style">L</div>
-					<div class="white_cell_style"></div>
-					<div class="white_cell_style"></div>
-					<div class="white_cell_style"></div>
-					<div class="white_cell_style"></div>
-					<div class="white_cell_style"></div>
+					<div class="white_cell_style math_seminar">S</div>
+					<div class="white_cell_style ppw_lecture">EP</div>
+					<div class="white_cell_style generic_apps_lab">L</div>
+					<div class="white_cell_style discrete_structures">L</div>
+					<div class="white_cell_style generic_apps_lab">L</div>
 					<div class="white_cell_style"></div>
 					<div class="white_cell_style"></div>
 				</div>
 				<div class="calendar_rows">
 					<div class="green_cell_style">M</div>
-					<div class="white_cell_style"></div>
-					<div class="white_cell_style"></div>
-					<div class="white_cell_style"></div>
-					<div class="white_cell_style"></div>
-					<div class="white_cell_style"></div>
+					<div class="white_cell_style english_lecture">EP</div>
+					<div class="white_cell_style discrete_structures">S</div>
+					<div class="white_cell_style ppw_lab">L</div>
+					<div class="white_cell_style math_lecture">P</div>
+					<div class="white_cell_style generic_apps_lab">L</div>
 					<div class="white_cell_style"></div>
 					<div class="white_cell_style"></div>
 				</div>
 				<div class="calendar_rows">
 					<div class="green_cell_style">Mi</div>
-					<div class="white_cell_style"></div>
-					<div class="white_cell_style"></div>
-					<div class="white_cell_style"></div>
-					<div class="white_cell_style"></div>
-					<div class="white_cell_style"></div>
+					<div class="white_cell_style basics_of_programming_lab">L</div>
+					<div class="white_cell_style basics_of_programming_lab">L</div>
+					<div class="white_cell_style discrete_structures">S</div>
+					<div class="white_cell_style discrete_structures">L</div>
+					<div class="white_cell_style generic_apps_lab">L</div>
 					<div class="white_cell_style"></div>
 					<div class="white_cell_style"></div>
 				</div>
 				<div class="calendar_rows">
 					<div class="green_cell_style">J</div>
-					<div class="white_cell_style"></div>
-					<div class="white_cell_style"></div>
-					<div class="white_cell_style"></div>
-					<div class="white_cell_style"></div>
-					<div class="white_cell_style"></div>
+					<div class="white_cell_style math_seminar">S</div>
+					<div class="white_cell_style english_lecture">L</div>
+					<div class="white_cell_style job_security_lecture">P</div>
+					<div class="white_cell_style discrete_structures">S</div>
+					<div class="white_cell_style tutor_hour">P</div>
 					<div class="white_cell_style"></div>
 					<div class="white_cell_style"></div>
 				</div>
 				<div class="calendar_rows">
 					<div class="green_cell_style">V</div>
-					<div class="white_cell_style"></div>
-					<div class="white_cell_style"></div>
-					<div class="white_cell_style"></div>
-					<div class="white_cell_style"></div>
+					<div class="white_cell_style basics_of_programming_lecture">P</div>
+					<div class="white_cell_style basics_of_programming_lecture">P</div>
+					<div class="white_cell_style discrete_structures">L</div>
+					<div class="white_cell_style ppw_lab">L</div>
 					<div class="white_cell_style"></div>
 					<div class="white_cell_style"></div>
 					<div class="white_cell_style"></div>
@@ -168,8 +171,8 @@
 			</div>
             <footer>
 				<div id="client_links">
-					<div id="download_timetable"><a class="footer_links" href="#">Descarca orar</a></div>
-					<div id="exam"><a class="footer_links" href="#">Examen</a></div>
+					<div id="download_timetable"><a class="footer_links" href="http://orar.usarb.md/download/?gr=53&sem=1&day=5&week=11&grName=IS11Z&mode=students&pdfWeek%5B%5D=6.11.2023&pdfWeek%5B%5D=12.11.2023">Descarca orar</a></div>
+					<div id="exam"><a class="footer_links" href="http://orar.usarb.md/printExams?gr=53&sem=1&day=6&week=11&grName=IS11Z&mode=students&pdfWeek%5B%5D=6.11.2023&pdfWeek%5B%5D=12.11.2023">Examen</a></div>
 					<div id="planning"><a class="footer_links" href="#">Planificare</a></div>
 				</div>
 				<div id="announce"><br><p>Orarul nu lucreaza intre orele 23:00 si 03:00</p></div>
@@ -179,15 +182,23 @@
 			<img src="assets/images/main_logo.png" alt="universitatea de stat alecu russo din balti"/>
 			<h2>UNIVERSITATEA DE STAT "ALECU RUSSO" DIN BALTI</h2>
 			<div id="big_timetable">
-				<div class="left_timetable"></div>
-				<div class="right_timetable"></div>
-				<div class="left_timetable"></div>
-				<div class="right_timetable"></div>
-				<div class="left_timetable"></div>
-				<div class="right_timetable"></div>
-				<div class="left_timetable"></div>
-				<div class="right_timetable"></div>
-				<div class="left_timetable"></div>
+				<div class="left_timetable">8:00<br>9:00</div>
+				<div class="right_timetable"><p>Bazele programarii I</p><p>Prelegeri</p><p>asist. univ.Skutnițki O.</p><p>aud. 505</p></div>
+				<div class="left_timetable">09:45<br>11:15</div>
+				<div class="right_timetable"><p>Bazele programarii I</p><p>Prelegeri</p><p>asist. univ.Skutnițki O.</p><p>aud. 505</p></div>
+				<div class="left_timetable">11:30<br>13:00</div>
+				<div class="right_timetable">
+                    <p>Proiectarea paginilor WEB</p><p>Laborator (Sb. 2)</p><p>asist. univ.Chilat S.</p><p>aud. 516</p>
+                    <p>Structuri discrete</p><p>Laborator (Sb. 2)</p><p>asist. univ.Țîcău V.</p><p>aud. 523</p>
+                </div>
+				<div class="left_timetable">13:15<br>14:45</div>
+				<div class="right_timetable"><p>Proiectarea paginilor WEB</p><p>Laborator (Sb. 2)</p><p>asist. univ.Chilat S.</p><p>aud. 516</p></div>
+				<div class="left_timetable">15:00<br>16:30</div>
+                <div class="right_timetable"></div>
+                <div class="left_timetable">16:45<br>18:15</div>
+                <div class="right_timetable"></div>
+                <div class="left_timetable">18:30<br>20:00</div>
+                <div class="right_timetable"></div>
 			</div>
         </section>
     </main>   

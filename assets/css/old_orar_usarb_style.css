@@ -75,13 +75,9 @@ button:hover{
 	cursor:pointer;
 	transition: background-color 500ms ease-in-out, color 500ms ease-in-out;
 }
-
-button:focus{ 
-    background-color: #FFFFFF;
-    color: #000000;
-}
-
 #input_area{
+	display:grid;
+	grid-template-columns: 9% 91%;
 	height: 25px;
 	width: 100%;
 	background-color: #FFFFFF;
@@ -96,17 +92,12 @@ button:focus{
 
 #input_area input{
 	display:block;
-    height: 100%;
-    width: 100%;
 	border:none;
 	outline:none;
 	font-size: 11pt;
 	font-weight:600;
 	color:#808080;
-    background-image: url(../images/icons/magnifier.png);
-    background-size: 25px 25px;
-    background-repeat: no-repeat;
-    padding: 0px 2px 0px 25px;
+	padding: 0px 2px;
 }
 
 #search_results{
@@ -114,7 +105,6 @@ button:focus{
 	width: 100%;
 	margin-bottom: 20px;
 	background-color: #FFFFFF;
-    overflow-y: auto;
 }
 
 #search_results ul{
@@ -132,11 +122,6 @@ button:focus{
 	color: #10BB60;
 	cursor: pointer;
 	transition: background-color 80ms ease-in-out, color 80ms ease-in-out;
-}
-
-#search_results li:focus{
-    background-color: #288855;
-    color: #FFFFFF;
 }
 
 #days_option, #weeks_option{
@@ -187,9 +172,7 @@ button:focus{
 	border: 1px solid #FFFFFF;
 }
 
-.green_cell_style:hover,
-.left_timetable:hover,
-.right_timetable:hover{
+.green_cell_style:hover{
 	background-color:#F5F5C5;
 	color: #000000;
 	cursor:pointer;
@@ -201,10 +184,6 @@ button:focus{
 	color: #000000;
 	border-right: 1px solid #000000;
 	border-bottom: 1px solid #000000;
-}
-
-.white_cell_style:hover{
-    border: 1px solid #FFFFFF;
 }
 
 #timetable_legend{
@@ -235,35 +214,23 @@ button:focus{
 	width:33%;
 	background-color: #288855;
 	border: 1px solid #FFFFFF;
-	border-radius: 3px;
+	border-radius: 5px;
 	margin-right: 10px;
-    background-image: url(../images/icons/acrobat.png);
-    background-size: 15px 15px;
-    background-repeat: no-repeat;
-    background-position-x: 90%;
 }
 
 #exam{
 	width:33%;
 	background-color: #EF506D;
 	border: 1px solid #FFFFFF;
-	border-radius: 3px;
+	border-radius: 5px;
 	margin-right: 10px;
-    background-image: url(../images/icons/printer.png);
-    background-size: 15px 15px;
-    background-repeat: no-repeat;
-    background-position-x: 90%;
 }
 
 #planning{
 	width:33%;
 	background-color: #7E4C6D;
 	border: 1px solid #FFFFFF;
-	border-radius: 3px;
-    background-image: url(../images/icons/database.png);
-    background-size: 13px 13px;
-    background-repeat: no-repeat;
-    background-position-x: 90%;
+	border-radius: 5px;
 }
 
 .footer_links {
@@ -315,72 +282,27 @@ button:focus{
 
 
 .left_timetable{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 	width: 100%;
-    height: 100px;
+	height: 100px;
 	background-color: white;
 	background-color: rgba(45,153,96,0.85);
 	border: 1px solid #FFFFFF;
-    text-align: center;
 	color: #FFFFFF;
+	text-align: center;
 	font-weight: 600;
 	font-size: 12pt;
 }
 
 .right_timetable{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
 	width: 100%;
-    height: 100px;
+	height: 100px;
 	background-color: rgba(255,255,255,0.85);
-	color: #757575;
 	border: 1px solid #000000;
-    border-left-color: #FFFFFF;
+	color: #FFFFFF;
+	text-align: center;
 	font-weight: 600;
 	font-size: 12pt;
 }
-.right_timetable p{ 
-    margin: 0;
-    padding: 1px;
-    font-weight: 200;
-}
 
-.right_timetable p:nth-child(1),
-.right_timetable p:nth-child(4),
-.right_timetable p:nth-child(5),
-.right_timetable p:nth-child(8) { font-weight: 600; }
 
-/* Code space for particular stylish of university lessons  (just for 11-th week of study)*/
-#math_seminar, #ppw_lecture, #generic_apps_lab, #discrete_structures, #english_lecture, #ppw_lab,
-#math_lecture, #basics_of_programming_lab, #job_security_lecture, #tutor_hour{ color:#FFFFFF; }
 
-#basbasics_of_programming_lecture {
-    color: black;
-}
-
-#math_seminar{ background-color: #76BD49;}
-
-#ppw_lecture { background-color: #8080C0;}
-
-#generic_apps_lab { background-color: #FF0080; }
-
-#discrete_structures { background-color: #F2D6F8; }
-
-#english_lecture { background-color: #402000; }
-
-#ppw_lab { background-color: #A3F1BC; }
-
-#math_lecture { background-color: #FF00FF; }
-
-#basics_of_programming_lab { background-color: #FF0080; }
-
-#basics_of_programming_lecture { background-color: #FFFF00; }
-
-#job_security_lecture { background-color: #D3D3D3; }
-
-#tutor_hour { background-color: #FF80C0; }

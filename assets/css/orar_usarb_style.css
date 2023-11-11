@@ -1,13 +1,11 @@
 @charset "utf-8";
-html {
-    height: 120vh;
-}
+html { height: 120vh; }
 
 body{
-    margin: 0;
     height: 100%;
+	margin: 0;
     background-image: url("../images/blured_usarb_upscale.png");
-	background-size: cover;
+	background-size: initial;
 	background-repeat: no-repeat;
 	font-family: 'Roboto', sans-serif;
 	font-style: normal;
@@ -16,68 +14,69 @@ body{
 
 main{
 	display: grid;
+	grid-template-columns: 37% 63%;
 	height: 100%;
-    grid-template-columns: 37% 63%;
-    padding: 0px 40px;
 	margin: 0px 120px;
+    padding: 0px 40px;
 
 }
 
-#main_section{
-    height: 100%;
-}
+#main_section{ height: 100%; }
+
 #header_name{
-	margin: 20px 0px;
 	display:flex;
-	align-items: center;
 	justify-content: center;
+	align-items: center;
     height: 50px;
     width: 100%;
-	padding: 10px 0px 10px 0px;
+	padding: 10px 0px;
+	margin: 20px 0px;
     background-color: #FFFFFF;
 
 }
 #header_name h1{
-    margin: 0;
 	width: 100%;
+	margin: 0;
+	font-size: 18pt;
+	font-weight: 900;
+	color: #666666;
     text-align:center;
-    color: #666666;
-    font-weight: 900;
-	font-size: 1.5em;
-
 }
 
-#secondary_section{
-    height: 100%;
-}
+#secondary_section{ height: 100%; }
+
 #under_buttons{
 	display: flex;
+	justify-content: space-between;
 	height: 40px;
 	width: 100%;
-	justify-content: space-between;
 	margin-bottom: 20px;
 }
 button{
-	margin: 0;
-	border: 0;
-	padding: 0 20px;
 	display: block;
 	height: 40px;
+	padding: 0 20px;
+	border: 0;
+	margin: 0;
 	background-color: #288855;
-	color: #FFFFFF;
 	font-size: 12pt;
 	font-weight: bold;
+	color: #FFFFFF;
 	
 }
 button:hover{
 	background-color:#FFFFFF;
+	transition: background-color 500ms ease-in-out, color 500ms ease-in-out;
 	color: #000000;
 	cursor:pointer;
-	transition: background-color 500ms ease-in-out, color 500ms ease-in-out;
 }
+
+button:focus{ 
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
 #input_area{
-	display:grid;
-	grid-template-columns: 9% 91%;
 	height: 25px;
 	width: 100%;
 	background-color: #FFFFFF;
@@ -92,12 +91,17 @@ button:hover{
 
 #input_area input{
 	display:block;
+    height: 100%;
+    width: 100%;
+	padding: 0px 2px 0px 25px;
 	border:none;
 	outline:none;
+    background-image: url(../images/icons/magnifier.png);
+    background-size: 25px 25px;
+    background-repeat: no-repeat;
 	font-size: 11pt;
 	font-weight:600;
 	color:#808080;
-	padding: 0px 2px;
 }
 
 #search_results{
@@ -105,86 +109,94 @@ button:hover{
 	width: 100%;
 	margin-bottom: 20px;
 	background-color: #FFFFFF;
+    overflow-y: auto;
 }
 
 #search_results ul{
-	margin: 0;
 	padding: 0;
-	list-style-type: none;
+	margin: 0;
 	font-weight: 500;
 	color:#808080;
+	list-style-type: none;
 }
 
 #search_results li{ padding: 0px 10px; }
 
 #search_results li:hover{
 	background-color: #F5F5C5;
+	transition: background-color 80ms ease-in-out, color 80ms ease-in-out;
 	color: #10BB60;
 	cursor: pointer;
-	transition: background-color 80ms ease-in-out, color 80ms ease-in-out;
+}
+
+#search_results li:focus{
+    background-color: #288855;
+    color: #FFFFFF;
 }
 
 #days_option, #weeks_option{
 	display: block;
 	height: 40px;
 	width: 100%;
-	color: #757575;
+	border: none;
 	outline: none;
-	border:none;
+	color: #757575;
 	margin-bottom: 20px;
 	font-size: 11pt;
 	font-weight: 600;
 }
 
+#days_option:focus, #weeks_option:focus { outline: 1px solid #3399FF; }
+
 #days_option option, #weeks_option option{ font-size: 11pt; }
 
 #timetable_lessons{
 	display:flex;
-	width: 100%;
-	background-color:#FFFFFF;
 	flex-direction: column;
 	flex-wrap: wrap;
+	width: 100%;
 	margin-bottom: 20px;
+	background-color:#FFFFFF;
 }
-#timetable_lessons:hover{
-	cursor: pointer;
-}
+#timetable_lessons:hover{ cursor: pointer; }
 
 .calendar_rows{
 	display:flex;
 	flex-direction: row;
-	justify-content: space-between;
 	align-content: center;
-
+	justify-content: space-between;
 }
 
 .calendar_rows div{
-	text-align: center;
+	width: calc(100%/8);
 	font-size: 12pt;
 	font-weight: 500;
-	width: calc(100%/8);
-	
+	text-align: center;
 }
 
 .green_cell_style{
+	border: 1px solid #FFFFFF;
 	background-color: rgba(45,153,96,0.85);
 	color: #FFFFFF;
-	border: 1px solid #FFFFFF;
 }
 
-.green_cell_style:hover{
+.green_cell_style:hover,
+.left_timetable:hover,
+.right_timetable:hover{
 	background-color:#F5F5C5;
+	transition: background-color 80ms ease-in-out, color 80ms ease-in-out;
 	color: #000000;
 	cursor:pointer;
-	transition: background-color 80ms ease-in-out, color 80ms ease-in-out;
 }
 
 .white_cell_style{
-	background-color: rgba(255,255,255,0.85);
-	color: #000000;
 	border-right: 1px solid #000000;
 	border-bottom: 1px solid #000000;
+	background-color: rgba(255,255,255,0.85);
+	color: #000000;
 }
+
+.white_cell_style:hover{ border: 1px solid #FFFFFF; }
 
 #timetable_legend{
 	display: flex;
@@ -196,63 +208,74 @@ button:hover{
 
 #timetable_legend p{
 	display:block;
-	color: white;
 	margin: 10px;
 	font-size: 9pt;
 	font-weight: 600;
+	color: #FFFFFF;
 }
 
 #client_links {
 	display: flex;
-	width: 100%;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
+	width: 100%;
 	margin-bottom: 20px;
 }
 #download_timetable{
 	width:33%;
-	background-color: #288855;
 	border: 1px solid #FFFFFF;
-	border-radius: 5px;
+	border-radius: 3px;
 	margin-right: 10px;
+	background-color: #288855;
+    background-image: url(../images/icons/acrobat.png);
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    background-position-x: 90%;
 }
 
 #exam{
 	width:33%;
-	background-color: #EF506D;
 	border: 1px solid #FFFFFF;
-	border-radius: 5px;
+	border-radius: 3px;
 	margin-right: 10px;
+	background-color: #EF506D;
+    background-image: url(../images/icons/printer.png);
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    background-position-x: 90%;
 }
 
 #planning{
 	width:33%;
-	background-color: #7E4C6D;
 	border: 1px solid #FFFFFF;
-	border-radius: 5px;
+	border-radius: 3px;
+	background-color: #7E4C6D;
+    background-image: url(../images/icons/database.png);
+    background-size: 13px 13px;
+    background-repeat: no-repeat;
+    background-position-x: 90%;
 }
 
 .footer_links {
 	display: block;
+	padding: 0 5px;
 	font-size: 9pt;
-	text-align: center;
 	text-decoration: none;
 	color: #FFFFFF;
-	padding: 0 5px;
-	
+	text-align: center;
 }
 
 #announce{
-	width: 100%;
 	height: 100px;
+	width: 100%;
 	background-color: #E5F5F0;
 }
 
 #announce p{
 	display:block;
-	color:#3DD099;
 	font-size: 12pt;
+	color:#3DD099;
 	text-align: center;
 }
 
@@ -264,46 +287,87 @@ button:hover{
 }
 
 #secondary_section h2{
-	color:white;
 	margin: 20px auto 10px auto;
-	text-align: center;
 	letter-spacing: 1px;
 	font-size: 16pt;
 	font-weight: 600;
+	text-align: center;
+	color:white;
 	
 }
 
 #big_timetable{
 	display:grid;
 	grid-template-columns: 20% 80%;
-	background-color: white;
 	margin: 0px 40px;
+	background-color: white;
 }
 
 
 .left_timetable{
-	width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 	height: 100px;
-	background-color: white;
-	background-color: rgba(45,153,96,0.85);
+	width: 100%;
 	border: 1px solid #FFFFFF;
+	background-color: rgba(45,153,96,0.85);
+	font-size: 12pt;
+	font-weight: 600;
 	color: #FFFFFF;
 	text-align: center;
-	font-weight: 600;
-	font-size: 12pt;
 }
 
 .right_timetable{
-	width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
 	height: 100px;
-	background-color: rgba(255,255,255,0.85);
-	color: #000000;
+	width: 100%;
 	border: 1px solid #000000;
-	color: #FFFFFF;
-	text-align: center;
-	font-weight: 600;
+    border-left-color: #FFFFFF;
+	background-color: rgba(255,255,255,0.85);
 	font-size: 12pt;
+	font-weight: 600;
+	color: #757575;
+	text-align: center;
+}
+.right_timetable p{ 
+	padding: 1px;
+    margin: 0;
+    font-weight: 200;
 }
 
+.right_timetable p:nth-child(1),
+.right_timetable p:nth-child(4),
+.right_timetable p:nth-child(5),
+.right_timetable p:nth-child(8) { font-weight: 600; }
 
+/* Code space for particular stylish of university lessons  (just for 11-th week of study)*/
+.math_seminar, .ppw_lecture, .generic_apps_lab, .discrete_structures, .english_lecture, .ppw_lab,
+.math_lecture, .basics_of_programming_lab, .job_security_lecture, .tutor_hour{ color:#FFFFFF; }
 
+.basbasics_of_programming_lecture { color: black; }
+
+.math_seminar{ background-color: #76BD49;}
+
+.ppw_lecture { background-color: #8080C0;}
+
+.generic_apps_lab { background-color: #FF0080; }
+
+.discrete_structures { background-color: #F2D6F8; }
+
+.english_lecture { background-color: #402000; }
+
+.ppw_lab { background-color: #A3F1BC; }
+
+.math_lecture { background-color: #FF00FF; }
+
+.basics_of_programming_lab { background-color: #FF0080; }
+
+.basics_of_programming_lecture { background-color: #FFFF00; }
+
+.job_security_lecture { background-color: #D3D3D3; }
+
+.tutor_hour { background-color: #FF80C0; }
